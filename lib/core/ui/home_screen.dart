@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goldy/core/constant/app_color.dart';
+import 'package:goldy/core/constant/app_strings.dart';
 import 'package:goldy/core/ui/gradient%20_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class HomeScreen extends StatelessWidget {
      
       appBar: AppBar(
         title: const Text(
-          'Goldy App',
+          AppStrings.appName,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 24,
@@ -44,14 +45,14 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GradientButton(
-                  label: 'GOLD',
+                  label: AppStrings.gold,
                   gradient:  AppColor.goldGradient,
                   textColor:AppColor.textColor,
                   onPressed: () {},
                 ),
                 const SizedBox(height: 25), 
                 GradientButton(
-                  label: 'SILVER',
+                  label: AppStrings.silver,
                   gradient: AppColor.silverGradient,
                   textColor:AppColor.textColor,
                   onPressed: () {},
