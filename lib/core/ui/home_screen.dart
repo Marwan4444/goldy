@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:goldy/core/constant/app_color.dart';
 import 'package:goldy/core/constant/app_strings.dart';
+import 'package:goldy/core/routes/routes.dart';
 import 'package:goldy/core/ui/gradient%20_button.dart';
 
 class HomeScreen extends StatelessWidget {
+  
   const HomeScreen({super.key});
 
   @override
@@ -48,7 +50,9 @@ class HomeScreen extends StatelessWidget {
                   label: AppStrings.gold,
                   gradient:  AppColor.goldGradient,
                   textColor:AppColor.textColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoutes.goldScreen);
+                  },
                 ),
                 const SizedBox(height: 25), 
                 GradientButton(

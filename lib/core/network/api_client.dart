@@ -1,5 +1,6 @@
+
 import 'package:dio/dio.dart';
-import 'package:goldy/core/error/failures.dart';
+import 'package:goldy/core/error/failures.dart' show ServerFailure;
 
 class ApiClient {
 
@@ -23,26 +24,6 @@ class ApiClient {
     );
   }
 
-
-  Future<Map<String, dynamic>> post({
-    required String url,
-    Map<String, dynamic>? data,
-    Map<String, dynamic>? query,
-  }) async {
-
-    try {
-      final res = await dio.post(
-        url,
-        data: data,
-        queryParameters: query,
-      );
-
-      return res.data;
-
-    } on DioException catch (e) {
- throw ServerFailure.fromDioError(e);
-    }
-  }
 
   Future<Map<String, dynamic>> get({
     required String url,

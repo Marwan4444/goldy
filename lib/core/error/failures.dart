@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 abstract class Failures {
   final String errmessage;
 
- const Failures(this.errmessage);
+ const Failures( this.errmessage);
 }
 
 class ServerFailure extends Failures {
   
-ServerFailure(super.errmessage);
+ServerFailure(super.errmessage,);
 
 factory ServerFailure.fromDioError(DioException dioError) {
   switch (dioError.type) {
